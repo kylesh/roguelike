@@ -1,6 +1,7 @@
 #include <iostream>
-#include <vector>
 #include <sstream>
+
+#include "land.hpp"
 
 int cStrToInt(const char* const v)
 {
@@ -34,18 +35,14 @@ int main(int argc, char** argv)
 
    int  width  = cStrToInt(argv[1]);
    int  height = cStrToInt(argv[2]);
-   std::vector<std::vector<bool> > terrain;
 
-   for (int x = 0; x < height; x++)
-   {
-      terrain.push_back(std::vector<bool>());
-      for (int y = 0; y < width; y++)
-      {
-         terrain[x].push_back(x == 0 || y == 0 || x == height - 1 || y == width - 1);
-      }
-   }
+   Land level(width, height);
 
-   display_terrain(terrain);
+   display_terrain(level.getTerrain());
+
+   std::cout << level.isWall(0,0) << std::endl;
+   std::cout << level.isWall(1,1) << std::endl;
+   std::cout << level.isWall(-1,1) << std::endl;
  
    return 0;
 }

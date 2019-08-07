@@ -1,5 +1,9 @@
-all:
-	g++ main.cpp -o main -std=c++11
+SRC=main.cpp land.cpp
+CXX=g++
+FLAGS=-std=c++11
+
+main: $(SRC)
+	$(CXX) $^ -o $@ $(FLAGS)
 
 clean:
 	rm main
