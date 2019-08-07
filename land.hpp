@@ -11,6 +11,7 @@ public:
    const int& getWidth();
    const int& getHeight();
    const std::vector<std::vector<bool> >& getTerrain();
+   bool isWithinBounds(int coord_x, int coord_y);
    bool isWall(int coord_x, int coord_y);
    void setWidth(int new_width);
    void setHeight(int new_height);

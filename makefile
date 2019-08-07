@@ -1,4 +1,4 @@
-SRC=main.cpp land.cpp
+SRC=main.cpp land.cpp character.cpp
 CXX=g++
 FLAGS=-std=c++11
 
