@@ -1,4 +1,4 @@
-SRC=main.cpp land.cpp character.cpp
+SRC=main.cpp land.cpp character.cpp roguelike.cpp
 CXX=g++
 FLAGS=-std=c++11
 

@@ -2,6 +2,7 @@
 #include <sstream>
 
 #include "land.hpp"
+#include "character.hpp"
 
 int cStrToInt(const char* const v)
 {
@@ -33,8 +34,8 @@ int main(int argc, char** argv)
    if (argc != 3)
       std::cout << "Incorrect number of arguments... There must be two." << std::endl;
 
-   int  width  = cStrToInt(argv[1]);
-   int  height = cStrToInt(argv[2]);
+   int width  = cStrToInt(argv[1]);
+   int height = cStrToInt(argv[2]);
 
    Land level(width, height);
 
@@ -43,6 +44,10 @@ int main(int argc, char** argv)
    std::cout << level.isWall(0,0) << std::endl;
    std::cout << level.isWall(1,1) << std::endl;
    std::cout << level.isWall(-1,1) << std::endl;
+
+   Character character(1,1,1,'@');
+   std::cout << character.getXCoord() << std::endl;
+   int x = character.getXCoord();
  
    return 0;
 }
